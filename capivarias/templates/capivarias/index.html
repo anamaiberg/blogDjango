@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capivarias</title>
+</head>
+<script>
+  {% include 'capivarias/partials/scripts.js'%}
+</script>
+<style>
+  {% include 'capivarias/partials/styles.css'%}
+
+</style>
+<body>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+          <li><a href='http://'>Home</a></li>
+          <li><a href='http://'>Informativo</a></li>
+          <li><a href='http://'>Engraçado</a></li>
+          <li><a href='http://'>Fofo</a></li>
+        </ul>
+      </nav>
+
+
+
+      <main>
+        <section class="leading">
+
+          <p class="leading-bigtext">Capivarias</p>
+        </section>
+
+        <section class="cards">
+          {% for capivaria in capivarias %}
+          <article>
+            <img class="article-img" src="{{capivaria.img_final}}">
+            <h1 class="article-title">
+              {{capivaria.titulo}}
+            </h1>
+          </article>
+          {% endfor %}
+
+        </section>
+      </main>
+      
+    
+
+</body>
+</html>
+
