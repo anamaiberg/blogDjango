@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capivarias</title>
+    <link rel="icon" type="image/png" href="https://www.clipartmax.com/png/middle/337-3376372_capybara-capivara-desenho-kawaii.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#20fcf3">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#20fcf3">
+
+</head>
+
+<body style="margin: 0; color: rgb(0, 0, 0); background-color: #dcf0e2;  font-size: 25px">
+    <div style="padding-left: 25vw; padding-right: 25vw; font-family: 'Comic Sans MS';">
+        <h1 style="text-align: center;margin: 40px;"><span style=' font-family: "Comic Sans MS", sans-serif; color: rgb(210, 17, 168);'>💕{{capivarias.titulo}}</span><span style='font-family: "Comic Sans MS", sans-serif; color: rgb(210, 17, 168);'>💕</span></h1>
+
+
+        <div>
+            <div style="float: left;"><img style="width: 382px; margin-right: 25px" src="{{capivarias.img_final}}"></div>
+            <div>{%autoescape off%}{{capivarias.conteudo}}{%endautoescape%}</div>
+            <p><br></p>
+            <p><br></p>
+        </div>
+        <div style="font-size: 20px">
+        Escrito por: {{capivarias.autor}}<br>
+        Publicado em: {{capivarias.data_hora|date:'d/m/Y H:i'}}
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
