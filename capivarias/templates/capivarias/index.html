@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capivarias</title>
+    {% include 'capivarias/partials/menu.html'%}
+    <link rel="icon" type="image/png" href="https://www.clipartmax.com/png/middle/337-3376372_capybara-capivara-desenho-kawaii.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#20fcf3">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#20fcf3">
+</head>
+
+<style>
+    {% include 'capivarias/partials/styles.css'%}
+
+</style>
+
+<body>
+
+      <main>
+        <section class="leading">
+
+          <p class="leading-bigtext">Capivarias</p>
+        </section>
+
+        <section class="cards">
+          {% for capivaria in capivarias %}
+          <article>
+
+            <a href="{% url 'conteudo' capivaria.id %}">
+                <img class="article-img" src="{{capivaria.img_final}}">
+                <h1 class="article-title">
+                  {{capivaria.titulo}}
+                </h1>
+            </a>
+
+          </article>
+          {% endfor %}
+
+        </section>
+
+      </main>
+</body>
+</html>
+
